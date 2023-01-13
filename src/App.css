@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.App {
+  margin: 0 auto;
+  width: 100vw;
+  min-width: 37.5rem;
+  max-width: 144rem;
+  min-height: 100vh;
+  padding: 0 5vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  font-family: sans-serif;
+  background-color: rgb(255, 251, 241);
+}
+
+/* navigation styling */
+
+nav {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h3 {
+  font-size: 1.5rem;
+}
+
+nav .heart {
+  width: 1.5rem;
+  height: auto;
+  color: rgb(0, 0, 0);
+  fill: rgba(255, 255, 255, 0);
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+nav .liked {
+  color: red;
+  fill: red;
+  margin: 0 0.5rem;
+}
+
+nav .heart:hover {
+  color: black;
+  fill: black;
+  margin: 0 0.5rem;
+}
+
+.heart:hover .liked {
+  color: red;
+  fill: red;
+  margin: 0 0.5rem;
+}
+
+/* vinyl styling */
+
+main {
+  min-width: 25rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  transition: .1s ease-in-out;
+}
+
+main .vinyl-parent {
+  border-radius: 50rem;
+  cursor: pointer;
+}
+
+main .vinyl {
+  width: 100%;
+  max-width: 65rem;
+  width: 100%;
+  transition: 1.8s ease-in-out;
+}
+
+.vinyl.active {
+  transform: rotate(1800deg);
+  -webkit-transform: rotate(1800deg);
+  border-radius: 100%;
+}
+
+
+/* album info styling */
+.albumInfo {
+  max-width: 72rem;
+  height: 100vh;
+  width: 50%;
+  min-width: 27.5rem;
+  background-color: rgb(255, 251, 241);
+  right: -72rem;
+  position: absolute;
+  transition: all 1.8s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 0;
+  z-index: 1;
+}
+
+.albumInfo.active {
+    right: 0;
+  }
+
+.albumInfo .record-label {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 5rem;
+}
+
+.albumInfo .album-description {
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4rem;
+  max-width: 50rem;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 20vh;
+}
+
+.album-details {
+    height: 50vh;
+    overflow: scroll;
+    padding: 0 .5rem;
+}
+
+.album-checkbox-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 5rem;
+}
+
+.album-checkbox-wrapper svg {
+   cursor: pointer;
+}
+
+.album-title {
+    font-size: 2rem;
+     margin-bottom: 1rem;
+     max-width: 45rem;
+}
+
+.album-rank  {
+ font-size: 1.2rem;
+}
+
+
+.album-rank span{
+ font-weight: bold;
+}
+
+.album-description.noShow,
+.record-label.noShow,
+.album-checkbox-wrapper.noShow {
+  display: none;
+}
+
+
+/* footer styling */
+footer {
+  width: 90vw;
+  max-width: 144rem;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  font-size: .9rem;
+  opacity: 0.4
+}
