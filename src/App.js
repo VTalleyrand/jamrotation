@@ -20,10 +20,6 @@ function App() {
   const [ theme, setTheme] = useState(themes[0])
   
 
- for(let item in list) {
-  list[item].checked = false
- }
-
 
   // change themes 
   useEffect(() => {
